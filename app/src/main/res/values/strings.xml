@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ppt</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Opciones</string>
+
+    <string name="title_activity_juegoppt_full">JuegopptFull</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
