@@ -72,7 +72,7 @@ public class Juegoppt extends AppCompatActivity {
                 double oponente = aleatorio();
                 if (oponente == 2) {
                     //gana el usuario
-                    Oponente.setText("Oponente: Papel");
+                    Oponente.setText("Oponente: Papel.");
                     Tu.setText("Tu: Piedra");
                     Resultado.setText("Has Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
