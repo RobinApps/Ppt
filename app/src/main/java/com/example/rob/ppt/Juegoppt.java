@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -40,6 +41,8 @@ public class Juegoppt extends AppCompatActivity {
         Resultado = (TextView)findViewById(R.id.LbResultado);
         ganaOp = (TextView)findViewById(R.id.LbGanaOP);
         ganaTu = (TextView)findViewById(R.id.LgGanaTu);
+        final ImageView logo= (ImageView)findViewById(R.id.imgOp);
+
 
 
        // iniciarCrono();
@@ -77,7 +80,8 @@ public class Juegoppt extends AppCompatActivity {
                     Resultado.setText("Has Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
-
+                    logo.setImageResource(R.drawable.picpapel);
+                    logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
                 } else if (oponente == 3) {
@@ -87,7 +91,8 @@ public class Juegoppt extends AppCompatActivity {
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-
+                    logo.setImageResource(R.drawable.pictijera);
+                    logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
                 } else {
@@ -95,10 +100,14 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Piedra");
                     Resultado.setText("Ha sido un Empate");
+                    logo.setImageResource(R.drawable.picpiedra);
+                    logo.setVisibility(View.VISIBLE);
                     Nuevo.setEnabled(true);
                     varios();
                     time.cancel();
                 }
+                Papel.setVisibility(View.GONE);
+                Tijera.setVisibility(View.GONE);
             }
         });
 
@@ -111,7 +120,8 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Papel");
                     Tu.setText("Tu: Papel");
                     Resultado.setText("Ha sido un Empate");
-
+                    logo.setImageResource(R.drawable.picpapel);
+                    logo.setVisibility(View.VISIBLE);
                     Nuevo.setEnabled(true);
                     varios();
                     time.cancel();
@@ -122,7 +132,8 @@ public class Juegoppt extends AppCompatActivity {
                     Resultado.setText("Has Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
-
+                    logo.setImageResource(R.drawable.pictijera);
+                    logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
                 } else {
@@ -132,10 +143,13 @@ public class Juegoppt extends AppCompatActivity {
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-
+                    logo.setImageResource(R.drawable.picpiedra);
+                    logo.setVisibility(View.VISIBLE);
                    varios();
                     time.cancel();
                 }
+                Piedra.setVisibility(View.GONE);
+                Tijera.setVisibility(View.GONE);
             }
         });
 
@@ -150,7 +164,8 @@ public class Juegoppt extends AppCompatActivity {
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-
+                    logo.setImageResource(R.drawable.picpapel);
+                    logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
                 } else if (oponente == 3) {
@@ -158,6 +173,8 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Tijera");
                     Resultado.setText("Ha sido un Empate");
+                    logo.setImageResource(R.drawable.pictijera);
+                    logo.setVisibility(View.VISIBLE);
                     Nuevo.setEnabled(true);
                     time.cancel();
                 } else {
@@ -166,11 +183,14 @@ public class Juegoppt extends AppCompatActivity {
                     Tu.setText("Tu: Tijera");
                     Resultado.setText("Ha Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
-                    ganoOperdio(Integer.parseInt(ganaOp.getText().toString()),"PERDIDO");
-
+                    ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
+                    logo.setImageResource(R.drawable.picpiedra);
+                    logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
                 }
+                Papel.setVisibility(View.GONE);
+                Piedra.setVisibility(View.GONE);
             }
         });
 
@@ -181,6 +201,10 @@ public class Juegoppt extends AppCompatActivity {
                 Piedra.setEnabled(true);
                 Papel.setEnabled(true);
                 Tijera.setEnabled(true);
+                Piedra.setVisibility(View.VISIBLE);
+                Papel.setVisibility(View.VISIBLE);
+                Tijera.setVisibility(View.VISIBLE);
+                logo.setVisibility(View.GONE);
                 Oponente.setText("Oponente:");
                 Resultado.setText("GanaOPierde");
                 Tu.setText("Tu:");
