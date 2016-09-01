@@ -75,8 +75,10 @@ public class Juegoppt extends AppCompatActivity {
                 double oponente = aleatorio();
                 if (oponente == 2) {
                     //gana el usuario
+                    /*
                     Oponente.setText("Oponente: Papel.");
                     Tu.setText("Tu: Piedra");
+                    */
                     Resultado.setText("Has Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
@@ -86,8 +88,10 @@ public class Juegoppt extends AppCompatActivity {
                     time.cancel();
                 } else if (oponente == 3) {
                     //pierde el usuario
+                    /*
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Piedra");
+                    */
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
@@ -97,8 +101,10 @@ public class Juegoppt extends AppCompatActivity {
                     time.cancel();
                 } else {
                     //empates
+                    /*
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Piedra");
+                    */
                     Resultado.setText("Ha sido un Empate");
                     logo.setImageResource(R.drawable.picpiedra);
                     logo.setVisibility(View.VISIBLE);
@@ -117,8 +123,10 @@ public class Juegoppt extends AppCompatActivity {
                 double oponente = aleatorio();
                 if (oponente == 2) {
                     //gana el usuario
+                    /*
                     Oponente.setText("Oponente: Papel");
                     Tu.setText("Tu: Papel");
+                    */
                     Resultado.setText("Ha sido un Empate");
                     logo.setImageResource(R.drawable.picpapel);
                     logo.setVisibility(View.VISIBLE);
@@ -127,8 +135,10 @@ public class Juegoppt extends AppCompatActivity {
                     time.cancel();
                 } else if (oponente == 3) {
                     //pierde el usuario
+                    /*
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Papel");
+                    */
                     Resultado.setText("Has Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
@@ -138,8 +148,10 @@ public class Juegoppt extends AppCompatActivity {
                     time.cancel();
                 } else {
                     //empates
+                    /*
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Papel");
+                    */
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
@@ -159,8 +171,10 @@ public class Juegoppt extends AppCompatActivity {
                 double oponente = aleatorio();
                 if (oponente == 2) {
                     //gana el usuario
+                    /*
                     Oponente.setText("Oponente: Papel");
                     Tu.setText("Tu: Tijera");
+                    */
                     Resultado.setText("Has Ganado");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
@@ -170,17 +184,22 @@ public class Juegoppt extends AppCompatActivity {
                     time.cancel();
                 } else if (oponente == 3) {
                     //pierde el usuario
+                    /*
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Tijera");
+                    */
                     Resultado.setText("Ha sido un Empate");
                     logo.setImageResource(R.drawable.pictijera);
                     logo.setVisibility(View.VISIBLE);
+                    varios();
                     Nuevo.setEnabled(true);
                     time.cancel();
                 } else {
                     //empates
+                    /*
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Tijera");
+                    */
                     Resultado.setText("Ha Perdido");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
@@ -204,7 +223,7 @@ public class Juegoppt extends AppCompatActivity {
                 Piedra.setVisibility(View.VISIBLE);
                 Papel.setVisibility(View.VISIBLE);
                 Tijera.setVisibility(View.VISIBLE);
-                logo.setVisibility(View.GONE);
+                logo.setVisibility(View.INVISIBLE);
                 Oponente.setText("Oponente:");
                 Resultado.setText("GanaOPierde");
                 Tu.setText("Tu:");
