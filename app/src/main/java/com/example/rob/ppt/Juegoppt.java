@@ -1,5 +1,6 @@
 package com.example.rob.ppt;
 
+import android.media.Image;
 import android.os.CountDownTimer;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -20,9 +21,9 @@ public class Juegoppt extends AppCompatActivity {
     Button Tijera;
     Button Nuevo;
     TextView numeros;
-    TextView Oponente;
-    TextView Tu;
+
     TextView Resultado,ganaOp,ganaTu;
+    ImageView imgyou,imgopo;
 
 
 
@@ -36,12 +37,15 @@ public class Juegoppt extends AppCompatActivity {
         Tijera = (Button)findViewById(R.id.BtTijera);
         Nuevo = (Button)findViewById(R.id.BtNuevo);
         numeros = (TextView)findViewById(R.id.LbContador);
-        Oponente = (TextView)findViewById(R.id.LbOponente);
-        Tu = (TextView)findViewById(R.id.LbTu);
+
         Resultado = (TextView)findViewById(R.id.LbResultado);
         ganaOp = (TextView)findViewById(R.id.LbGanaOP);
         ganaTu = (TextView)findViewById(R.id.LgGanaTu);
         final ImageView logo= (ImageView)findViewById(R.id.imgOp);
+        imgyou = (ImageView)findViewById(R.id.you);
+        imgopo = (ImageView)findViewById(R.id.opo);
+        imgyou.setImageResource(R.drawable.you);
+        imgopo.setImageResource(R.drawable.opo);
 
 
 
@@ -57,7 +61,7 @@ public class Juegoppt extends AppCompatActivity {
                 Piedra.setEnabled(false);
                 Papel.setEnabled(false);
                 Tijera.setEnabled(false);
-                Resultado.setText("Se acabo el Tiempo, Has Perdido");
+                Resultado.setText("Se acabo el Tiempo, LOSE");
                 ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                 ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
 
@@ -79,10 +83,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Papel.");
                     Tu.setText("Tu: Piedra");
                     */
-                    Resultado.setText("Has Perdido");
+                    Resultado.setText("LOSE");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
-                    logo.setImageResource(R.drawable.picpapel);
+                    logo.setImageResource(R.drawable.picpapelr);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
@@ -92,10 +96,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Piedra");
                     */
-                    Resultado.setText("Has Ganado");
+                    Resultado.setText("WIN");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-                    logo.setImageResource(R.drawable.pictijera);
+                    logo.setImageResource(R.drawable.pictijerar);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
@@ -105,8 +109,8 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Piedra");
                     */
-                    Resultado.setText("Ha sido un Empate");
-                    logo.setImageResource(R.drawable.picpiedra);
+                    Resultado.setText("Empate");
+                    logo.setImageResource(R.drawable.picpiedrar);
                     logo.setVisibility(View.VISIBLE);
                     Nuevo.setEnabled(true);
                     varios();
@@ -127,8 +131,8 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Papel");
                     Tu.setText("Tu: Papel");
                     */
-                    Resultado.setText("Ha sido un Empate");
-                    logo.setImageResource(R.drawable.picpapel);
+                    Resultado.setText("Empate");
+                    logo.setImageResource(R.drawable.picpapelr);
                     logo.setVisibility(View.VISIBLE);
                     Nuevo.setEnabled(true);
                     varios();
@@ -139,10 +143,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Papel");
                     */
-                    Resultado.setText("Has Perdido");
+                    Resultado.setText("LOSE");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
-                    logo.setImageResource(R.drawable.pictijera);
+                    logo.setImageResource(R.drawable.pictijerar);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
@@ -152,10 +156,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Papel");
                     */
-                    Resultado.setText("Has Ganado");
+                    Resultado.setText("WIN");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-                    logo.setImageResource(R.drawable.picpiedra);
+                    logo.setImageResource(R.drawable.picpiedrar);
                     logo.setVisibility(View.VISIBLE);
                    varios();
                     time.cancel();
@@ -175,10 +179,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Papel");
                     Tu.setText("Tu: Tijera");
                     */
-                    Resultado.setText("Has Ganado");
+                    Resultado.setText("WIN");
                     ganaTu.setText(String.valueOf(Integer.parseInt(ganaTu.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaTu.getText().toString()), "GANADO");
-                    logo.setImageResource(R.drawable.picpapel);
+                    logo.setImageResource(R.drawable.picpapelr);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
@@ -188,8 +192,8 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Tijera");
                     Tu.setText("Tu: Tijera");
                     */
-                    Resultado.setText("Ha sido un Empate");
-                    logo.setImageResource(R.drawable.pictijera);
+                    Resultado.setText("Empate");
+                    logo.setImageResource(R.drawable.pictijerar);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     Nuevo.setEnabled(true);
@@ -200,10 +204,10 @@ public class Juegoppt extends AppCompatActivity {
                     Oponente.setText("Oponente: Piedra");
                     Tu.setText("Tu: Tijera");
                     */
-                    Resultado.setText("Ha Perdido");
+                    Resultado.setText("LOSE");
                     ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
                     ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
-                    logo.setImageResource(R.drawable.picpiedra);
+                    logo.setImageResource(R.drawable.picpiedrar);
                     logo.setVisibility(View.VISIBLE);
                     varios();
                     time.cancel();
@@ -224,9 +228,9 @@ public class Juegoppt extends AppCompatActivity {
                 Papel.setVisibility(View.VISIBLE);
                 Tijera.setVisibility(View.VISIBLE);
                 logo.setVisibility(View.INVISIBLE);
-                Oponente.setText("Oponente:");
+
                 Resultado.setText("GanaOPierde");
-                Tu.setText("Tu:");
+
                 Nuevo.setEnabled(false);
                 time.start();
             }

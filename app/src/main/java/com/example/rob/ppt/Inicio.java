@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class Inicio extends AppCompatActivity
 
@@ -22,6 +23,7 @@ public class Inicio extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Button IrJuego;
+    ImageView imgyou2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,8 @@ public class Inicio extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        imgyou2 = (ImageView)findViewById(R.id.imgyou);
+        imgyou2.setImageResource(R.drawable.you);
         //ir al juego
         IrJuego= (Button)findViewById(R.id.BtJugar);
 

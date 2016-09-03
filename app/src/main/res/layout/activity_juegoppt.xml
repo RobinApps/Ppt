@@ -6,13 +6,15 @@
     android:background="#ffffff"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:orientation ="vertical">
+    android:orientation ="vertical"
+    android:gravity="center_horizontal">
 
 
-
-
-
-
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation ="horizontal"
+        >
 
 
             <TextView
@@ -20,62 +22,75 @@
                 android:layout_height="wrap_content"
                 android:text="3"
                 android:id="@+id/LbContador"
-                android:textSize="100dp"
-                android:layout_gravity="center_horizontal" />
+                android:textSize="100sp"
+                android:layout_marginLeft="75dp" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_marginLeft="50dp">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/opo"
+                    android:layout_gravity="center_horizontal" />
 
-    <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:orientation ="horizontal">
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="0"
+                    android:id="@+id/LbGanaOP"
+                    android:textSize="32dp"
+                    android:layout_gravity="center_vertical" />
 
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="Oponente:"
-                android:id="@+id/LbOponente"
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:id="@+id/you"
+                    android:layout_gravity="center_horizontal" />
 
-                android:textSize="15dp" />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:id="@+id/LgGanaTu"
+                    android:textSize="32dp" />
 
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="0"
-                android:id="@+id/LbGanaOP"
-                android:textSize="15dp" />
+            </LinearLayout>
 
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="Tu:"
-                android:id="@+id/LbTu"
-                android:textSize="15dp"
-                />
-
-            <TextView
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"
-                android:layout_weight="1"
-                android:text="0"
-                android:id="@+id/LgGanaTu"
-                android:textSize="15dp" />
+        </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:text="GanaOPierde"
                 android:id="@+id/LbResultado"
-             />
+                android:layout_gravity="center_horizontal"
+                android:textSize="20dp"
+                android:textColor="#6a7bea" />
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
