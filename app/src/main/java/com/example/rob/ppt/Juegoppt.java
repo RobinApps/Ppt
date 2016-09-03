@@ -63,7 +63,7 @@ public class Juegoppt extends AppCompatActivity {
                 Tijera.setEnabled(false);
                 Resultado.setText("Se acabo el Tiempo, LOSE");
                 ganaOp.setText(String.valueOf(Integer.parseInt(ganaOp.getText().toString()) + 1));
-                ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDIDO");
+                ganoOperdio(Integer.parseInt(ganaOp.getText().toString()), "PERDID");
 
 
             }
